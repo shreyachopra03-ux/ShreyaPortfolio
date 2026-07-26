@@ -1,28 +1,51 @@
+# Shreya Chopra — Portfolio
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+Personal portfolio website of **Shreya Chopra**, a Full Stack Developer specializing in MERN, TypeScript, and Tailwind CSS.
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+---
 
-# Features
+## Tech Stack
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
+Built with **Next.js 14**, [shadcn/ui](https://ui.shadcn.com/), [Magic UI](https://magicui.design/), and deployed on **Vercel**.
+
+| Category       | Technologies                                              |
+| -------------- | --------------------------------------------------------- |
+| Frontend       | Next.js 14, React, TypeScript, Tailwind CSS, Framer Motion |
+| UI Libraries   | shadcn/ui, Magic UI                                       |
+| Content        | MDX (via content-collections)                             |
+| Deployment     | Vercel                                                    |
+
+---
+
+## Features
+
+- Single config file — edit [`src/data/resume.tsx`](./src/data/resume.tsx) to personalize everything
+- Responsive design across all devices
+- Blog powered by MDX
 - Optimized for Next.js and Vercel
 
-# Getting Started Locally
+---
 
-1. Clone this repository to your local machine:
+## Projects Showcased
+
+- **[Archive](https://timeline-project-eosin.vercel.app/login)** — Full-stack media management platform (MERN + TypeScript + FFmpeg + Cloudinary + Clerk)
+- **[Sandburgs](https://namaste-react-series-pi.vercel.app/)** — Food delivery web app (React + TypeScript + Redux Toolkit)
+- **[FlixVerse](https://netflixproject-mu.vercel.app/)** — Movie discovery platform with AI suggestions (React + TMDB API + OpenAI GPT + Firebase)
+
+---
+
+## Getting Started Locally
+
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dillionverma/portfolio
+   git clone https://github.com/shreyachopra03-ux/ShreyaPortfolio
    ```
 
-2. Move to the cloned directory
+2. Move into the directory:
 
    ```bash
-   cd portfolio
+   cd Portfolio
    ```
 
 3. Install dependencies:
@@ -31,15 +54,25 @@ Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://
    pnpm install
    ```
 
-4. Start the local Server:
+4. Start the dev server:
 
    ```bash
    pnpm dev
    ```
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+5. Edit [`src/data/resume.tsx`](./src/data/resume.tsx) to update your info.
 
-# License
+---
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
-# Portfolio
+## Contact
+
+- 📧 [chopra.shreya003@gmail.com](mailto:chopra.shreya003@gmail.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/shreya-chopra03/)
+- 🐙 [GitHub](https://github.com/shreyachopra03-ux)
+- 🐦 [X / Twitter](https://x.com/chopra_shreya03)
+
+---
+
+## License
+
+Licensed under the [MIT License](./LICENSE).
