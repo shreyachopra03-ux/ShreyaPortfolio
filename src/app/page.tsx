@@ -7,10 +7,7 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
-import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
-import WorkSection from "@/components/section/work-section";
-import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -21,12 +18,12 @@ export default function Page() {
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
             <div className="gap-2 flex flex-col order-2 md:order-1">
-              <BlurFadeText delay={BLUR_FADE_DELAY} className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl" yOffset={8} text={`Hi, I'm ${DATA.name.split(" ")[0]}`} />
-              <BlurFadeText className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl" delay={BLUR_FADE_DELAY} text={DATA.description} />
+              <BlurFadeText delay={BLUR_FADE_DELAY} className="text-2xl font-semibold tracking-tighter sm:text-3xl lg:text-4xl" yOffset={8} text={`Hi, I'm ${DATA.name.split(" ")[0]}`} />
+              <BlurFadeText className="text-muted-foreground max-w-[600px] md:text-base lg:text-lg" delay={BLUR_FADE_DELAY} text={DATA.description} />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="object-cover object-center" />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
@@ -34,16 +31,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* <section id="work">
-        <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
-            <WorkSection />
-          </BlurFade>
-        </div>
-      </section> */}
+      {/* Work section hidden until experience is added */}
 
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-4">
@@ -71,11 +59,7 @@ export default function Page() {
           <ProjectsSection />
         </BlurFade>
       </section>
-      {/* <section id="hackathons">
-        <BlurFade delay={BLUR_FADE_DELAY * 13}>
-          <HackathonsSection />
-        </BlurFade>
-      </section> */}
+
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
