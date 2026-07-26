@@ -13,19 +13,28 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
-    <main className="min-h-dvh flex flex-col gap-14 relative">
+    <main className="min-h-dvh flex flex-col gap-10 relative">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
-            <div className="gap-2 flex flex-col order-2 md:order-1">
-              <BlurFadeText delay={BLUR_FADE_DELAY} className="text-2xl font-semibold tracking-tighter sm:text-3xl lg:text-4xl" yOffset={8} text={`Hi, I'm ${DATA.name.split(" ")[0]}`} />
-              <BlurFadeText className="text-muted-foreground max-w-[600px] md:text-base lg:text-lg" delay={BLUR_FADE_DELAY} text={DATA.description} />
+            <div className="gap-3 flex flex-col order-2 md:order-1">
+              <BlurFadeText delay={BLUR_FADE_DELAY} className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl bg-gradient-to-br from-foreground via-foreground/90 to-foreground/60 bg-clip-text text-transparent" yOffset={8} text={`Hi, I'm ${DATA.name.split(" ")[0]}`} />
+              <BlurFadeText className="text-muted-foreground max-w-[520px] text-sm leading-relaxed" delay={BLUR_FADE_DELAY * 2} text={DATA.description} />
+              <BlurFade delay={BLUR_FADE_DELAY * 3}>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-xs text-muted-foreground font-mono">Based in Delhi, India</span>
+                </div>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="object-cover object-center" />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <div className="relative">
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary/30 via-primary/10 to-transparent blur-md" />
+                <Avatar className="relative size-24 md:size-28 border-2 border-primary/20 rounded-full shadow-xl">
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="object-cover object-center" />
+                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </div>
             </BlurFade>
           </div>
         </div>
@@ -36,7 +45,10 @@ export default function Page() {
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+            <div className="flex items-center gap-3">
+              <h2 className="text-base font-semibold tracking-tight whitespace-nowrap">Skills</h2>
+              <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
+            </div>
           </BlurFade>
           <div className="flex flex-wrap gap-2">
             {DATA.skills.map((skill, id) => {
@@ -44,9 +56,9 @@ export default function Page() {
 
               return (
                 <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                  <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2">
-                    {Icon && <Icon className="size-4 rounded overflow-hidden object-contain" />}
-                    <span className="text-foreground text-sm font-medium">{skill.name}</span>
+                  <div className="border border-border/60 bg-muted/40 hover:bg-primary/10 hover:border-primary/30 transition-all duration-200 rounded-lg h-7 w-fit px-3 flex items-center gap-1.5 cursor-default">
+                    {Icon && <Icon className="size-3.5 rounded overflow-hidden object-contain" />}
+                    <span className="text-foreground/80 text-xs font-medium">{skill.name}</span>
                   </div>
                 </BlurFade>
               );
@@ -63,7 +75,10 @@ export default function Page() {
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Education</h2>
+            <div className="flex items-center gap-3">
+              <h2 className="text-base font-semibold tracking-tight whitespace-nowrap">Education</h2>
+              <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
+            </div>
           </BlurFade>
           <div className="flex flex-col gap-8">
             {DATA.education.map((education, index) => (
@@ -97,7 +112,10 @@ export default function Page() {
       <section id="about">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className="text-xl font-bold">About</h2>
+            <div className="flex items-center gap-3">
+              <h2 className="text-base font-semibold tracking-tight whitespace-nowrap">About</h2>
+              <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
+            </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">

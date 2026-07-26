@@ -4,16 +4,16 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
 
-const geist = Geist({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
+const firaCode = Fira_Code({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-mono",
@@ -60,14 +60,14 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
-          geist.variable,
-          geistMono.variable
+          inter.variable,
+          firaCode.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
             
-            <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
+            <div className="relative z-10 max-w-2xl mx-auto py-10 pb-20 sm:py-16 px-6">
               {children}
             </div>
             <Navbar />
