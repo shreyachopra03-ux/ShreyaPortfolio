@@ -6,6 +6,15 @@ import { Typescript } from "@/components/ui/svgs/typescript";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Csharp } from "@/components/ui/svgs/csharp";
 
+type Work = {
+  company: string;
+  title: string;
+  logoUrl?: string;
+  start: string;
+  end?: string;
+  description?: string;
+};
+
 type Hackathon = {
   title: string;
   dates?: string;
@@ -131,7 +140,7 @@ export const DATA = {
     },
   },
 
-  work: [],
+  work: [] as Work[],
   education: [
     {
       school: "Guru Tegh Bahadur Institute of Technology",
