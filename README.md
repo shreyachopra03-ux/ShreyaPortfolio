@@ -1,4 +1,4 @@
-# Shreya Chopra — Portfolio
+# Shreya Chopra - Portfolio
 
 Personal portfolio website of **Shreya Chopra**, a Full Stack Developer specializing in MERN, TypeScript, and Tailwind CSS.
 
